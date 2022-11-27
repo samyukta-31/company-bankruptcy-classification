@@ -9,9 +9,8 @@ WORKDIR /company-bankruptcy-classification
 COPY . .
 RUN apt update && \
     apt install python3-pip -y
-CMD ["bash"]
-
 RUN pip install -r requirements.txt
 RUN python3 main.py
 
+CMD ["bash"]
 EXPOSE 3000
