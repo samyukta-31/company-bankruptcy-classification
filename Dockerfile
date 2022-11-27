@@ -9,7 +9,7 @@ WORKDIR /company-bankruptcy-classification
 COPY . .
 RUN apt update && \
     apt install python3-pip -y
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 RUN python3 main.py
 
 CMD ["bash"]
