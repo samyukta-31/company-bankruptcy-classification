@@ -1,6 +1,6 @@
-scikit-learn==0.24.2
-scipy==1.7.3
-seaborn==0.11.2
-pyarrow==3.0.0
-pandas==1.4.1
-numpy==1.21.5
+scikit-learn
+scipy
+seaborn
+pyarrow
+pandas
+numpy
