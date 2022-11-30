@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import numpy as np
 import imblearn
-from collections import Counter
 from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
@@ -16,11 +15,11 @@ raw_data = pd.read_csv('./data/data.csv')
 # Data dimensions
 raw_data.shape
 
-# Data information
-raw_data.info()
+# # Data information
+# raw_data.info()
 
-# Top 5 data entries
-raw_data.head()
+# # Top 5 data entries
+# raw_data.head()
 
 # Checking for missing data
 raw_data.isnull().sum()
@@ -41,7 +40,7 @@ features = raw_data.columns[1:]
 X, Y = raw_data[features], raw_data[label]
 
 # Split data 80-20 into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=50)
 print ('Training cases: %d\nTest cases: %d' % (X_train.shape[0], X_test.shape[0]))
 
 ## Removing class imbalance with SMOTE
